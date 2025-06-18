@@ -1,0 +1,150 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+    --cor-primaria: #2E8B57; /* Verde mar - para elementos principais */
+    --cor-secundaria: #FFD700; /* Dourado - para destaque */
+    --cor-texto: #333; /* Cinza escuro - para textos */
+    --cor-fundo: #F8F8F8; /* Cinza claro - para fundo */
+    --cor-bordas: #ddd; /* Cinza - para bordas */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.campo-cidade {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo-cidade > div {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.campo, .cidade {
+    background-color: #f0fdf4; /* Um verde bem clarinho */
+}
+
+.uniao {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.uniao img {
+    margin-top: 15px;
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li::before {
+    content: '✅'; /* Um emoji de checkmark */
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .campo-cidade {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campo-cidade > div {
+        min-width: unset;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+}
